@@ -10,7 +10,7 @@ int main(){
     while(lines--){
         string command;
         cin>>command;
-        if(command == "insert"){
+        if(command == "insert"){ //insert
             int num;
             cin>>num;
             set1.insert(num);
@@ -18,8 +18,9 @@ int main(){
         else if(command == "print"){
             if(set1.empty()) continue;
             else{
-                cout<<*set1.begin();
-                for(auto i:set1){
+                //Note:The end is not accept blanks
+                cout<<*set1.begin();  
+                for(auto i:set1){   
                     if(i == *set1.begin()) continue;
                     cout<<" ";
                     cout<<i;
@@ -28,7 +29,7 @@ int main(){
             }
         }
         else if(command == "min"){
-            if(set1.empty()) continue;
+            if(set1.empty()) continue; //if empty do nothing
             else{
                 auto i = set1.begin();
                 cout<<*i<<endl;
